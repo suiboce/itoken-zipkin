@@ -1,4 +1,8 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
+---
+spring:
   profiles: dev
   cloud:
     config:
@@ -6,8 +10,6 @@ spring:
       name: zipkin
       label: master
       profile: dev
-  main:
-    allow-bean-definition-overriding: true
 ---
 spring:
   profiles: prod
